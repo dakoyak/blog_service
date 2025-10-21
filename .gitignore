@@ -206,3 +206,6 @@ mygrations/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Django Media Files
+_media/
