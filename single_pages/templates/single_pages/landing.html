@@ -2,16 +2,107 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>으헤헤</title>
+    <title>🚀 핑핑이의 블로그 서비스</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        nav {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #007aff; /* 애플 블루 */
+            font-weight: 600;
+            padding: 10px 15px;
+            border-radius: 5px;
+            /* 마우스를 올렸을 때 부드럽게 변경됩니다 */
+            transition: background-color 0.2s ease;
+        }
+        nav a:hover {
+            background-color: #eef;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 3em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        /* 재미있는 버튼 스타일 */
+        .fun-button {
+            background-color: #ff6347; /* 토마토 레드 */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            /* 마우스를 올렸을 때 애니메이션 효과 */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-top: 20px;
+        }
+        .fun-button:hover {
+            transform: translateY(-3px); /* 살짝 위로 이동 */
+            box-shadow: 0 8px 15px rgba(255, 99, 71, 0.4);
+        }
+    </style>
 </head>
 <body>
-<nav>
-    <a href="/blog/">Blog</a>
-    <a href="/about_me/">이거 누르면 about me</a>
-</nav>
+    <nav>
+        <a href="/blog/">📚 기술 블로그 가기</a>
+        <a href="/about_me/">👨‍💻 나에 대해 알아보기</a>
+    </nav>
 
-<h1> 방가방가 햄토리</h1>
-<h2> 남대문페이지</h2>
-<h3> 누구쇼</h3>
+    <div class="container">
+        <h1>🚀 환영합니다! 🚀</h1>
+        <h2>여기는 핑핑이의 메인 페이지입니다.</h2>
+        <p>백엔드 개발자가 되기 위한 좌충우돌 기록이 담긴 곳이죠.</p>
+        <p>아래 버튼을 눌러서 비밀 메시지를 확인해 보세요!</p>
+
+        <button class="fun-button" onclick="showMessage()">이 버튼을 눌러보세요!</button>
+
+        <p id="secret-message" style="margin-top: 20px; font-size: 1.1em; color: #007aff;"></p>
+    </div>
+
+    <script>
+        // showMessage라는 이름의 함수(기능)를 만듭니다.
+        function showMessage() {
+            // 'secret-message'라는 id를 가진 p 태그를 찾습니다.
+            var messageElement = document.getElementById('secret-message');
+
+            // 재미있는 메시지 목록
+            var messages = [
+                "🎉 짠! 성공입니다!",
+                "💻 오늘도 코딩! 내일도 코딩!",
+                "사실... 저는 장고가 좋아요. 🤫",
+                "버그를 발견하셨나요? 축하합니다!",
+                "방가방가 햄토리! 🐹"
+            ];
+
+            // 메시지 목록(배열)에서 랜덤으로 하나를 선택합니다.
+            var randomIndex = Math.floor(Math.random() * messages.length);
+            var randomMessage = messages[randomIndex];
+
+            // p 태그의 내용(textContent)을 랜덤 메시지로 변경합니다.
+            messageElement.textContent = randomMessage;
+        }
+    </script>
 </body>
 </html>
